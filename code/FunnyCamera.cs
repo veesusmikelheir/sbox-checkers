@@ -14,7 +14,7 @@ namespace Checkers
         {
             var pawn = Local.Pawn;
             if (pawn == null) return;
-            Rot = pawn.EyeRot * Quaternion.CreateFromYawPitchRoll(0,0,1);
+            Rot = pawn.EyeRot * Quaternion.CreateFromYawPitchRoll(0,0,Time.Tick);
             Pos = pawn.EyePos;
 
             FieldOfView = 90;
